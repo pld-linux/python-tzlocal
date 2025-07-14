@@ -2,7 +2,7 @@
 # Conditional build:
 %bcond_without	tests	# unit tests
 %bcond_without	python2 # CPython 2.x module
-%bcond_without	python3 # CPython 3.x module
+%bcond_with	python3 # CPython 3.x module (built from python3-tzlocal.spec)
 
 %define 	module	tzlocal
 Summary:	tzinfo object for the local timezone
@@ -10,7 +10,7 @@ Summary(pl.UTF-8):	Obiekt tzinfo dla lokalnej strefy czasowej
 Name:		python-%{module}
 # keep 2.x here for python2 support
 Version:	2.1
-Release:	7
+Release:	8
 License:	MIT
 Group:		Development/Languages/Python
 #Source0Download: https://pypi.org/simple/tzlocal/
